@@ -17,24 +17,34 @@ const config = {
   }
 }
 
-module.exports = WithBundleAnalyzer(WithCss({
+module.exports = WithCss({
   webpack(config) {
     config.plugins.push(new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/))
     return config
   },
   publicRuntimeConfig: {
     GITHUB_OAUTH_URL
-  },
-  // @zeit/next-bundle-analyzer
-  // analyzeBrowser: ['browser', 'both'].includes(process.env.BUNDLE_ANALYZE),
-  // bundleAnalyzerConfig: {
-  //   server: {
-  //     analyzerMode: 'static',
-  //     reportFilename: './bundle/server.html'
-  //   },
-  //   browser: {
-  //     analyzerMode: 'static',
-  //     reportFilename: './bundle/client.html'
-  //   }
-  // }
-}))
+  }
+})
+
+// module.exports = WithBundleAnalyzer(WithCss({
+//   webpack(config) {
+//     config.plugins.push(new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/))
+//     return config
+//   },
+//   publicRuntimeConfig: {
+//     GITHUB_OAUTH_URL
+//   },
+// @zeit/next-bundle-analyzer
+// analyzeBrowser: ['browser', 'both'].includes(process.env.BUNDLE_ANALYZE),
+// bundleAnalyzerConfig: {
+//   server: {
+//     analyzerMode: 'static',
+//     reportFilename: './bundle/server.html'
+//   },
+//   browser: {
+//     analyzerMode: 'static',
+//     reportFilename: './bundle/client.html'
+//   }
+// }
+// }))
