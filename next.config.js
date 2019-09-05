@@ -1,6 +1,6 @@
 const webpack = require('webpack')
 const WithCss = require('@zeit/next-css')
-const WithBundleAnalyzer = require('@zeit/next-bundle-analyzer')
+// const WithBundleAnalyzer = require('@zeit/next-bundle-analyzer')
 const { CLIENT_ID, GITHUB_OAUTH_URL } = require('./config')
 
 if (typeof require !== 'undefined') {
