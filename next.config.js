@@ -25,15 +25,16 @@ module.exports = WithBundleAnalyzer(WithCss({
   publicRuntimeConfig: {
     GITHUB_OAUTH_URL
   },
-  analyzeBrowser: ['browser', 'both'].includes(process.env.BUNDLE_ANALYZE),
-  bundleAnalyzerConfig: {
-    server: {
-      analyzerMode: 'static',
-      reportFilename: './bundle/server.html'
-    },
-    browser: {
-      analyzerMode: 'static',
-      reportFilename: './bundle/client.html'
-    }
-  }
+  // @zeit/next-bundle-analyzer
+  // analyzeBrowser: ['browser', 'both'].includes(process.env.BUNDLE_ANALYZE),
+  // bundleAnalyzerConfig: {
+  //   server: {
+  //     analyzerMode: 'static',
+  //     reportFilename: './bundle/server.html'
+  //   },
+  //   browser: {
+  //     analyzerMode: 'static',
+  //     reportFilename: './bundle/client.html'
+  //   }
+  // }
 }))
